@@ -29,3 +29,42 @@ ul li {
   margin: 0px 25px;
   font-size: 25px;
 }
+
+ons-button.button {
+    background: red;
+}
+
+h2 {
+	text-align: center;
+}
+
+.back-button__icon {
+    fill: white!important;
+}
+
+/*Search style*/
+
+.search-box {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input#search-field {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    border-color: red;
+}
+
+button#search-button {
+    padding: 10px 20px;
+    background: red;
+    border-color: antiquewhite;
+    color: white;
+    border-radius: 5px;
+}
+
+.paginatiion-pokemons {
+    text-align: center;
+    margin: 10px 0px;
+}

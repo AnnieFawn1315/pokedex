@@ -12,16 +12,17 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <!-- <script src="./lib/onsenui/js/onsenui.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <!-- <script src="./lib/onsenui/js/onsenui.min.js"></script> -->
 
   <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
   <title>Pokemon world!</title>
 </head>
 
 <body>
-  <ons-navigator id="myNavigator" page="list-temp"></ons-navigator>
+
+   <ons-navigator id="myNavigator" page="list-temp"></ons-navigator>
 
   <!-- ******************** main-template ******************** -->
 
@@ -34,31 +35,28 @@
   </template>
 
   <!-- ******************** list template ******************** -->
-  <!--
-    - CG: you had this as an in-line page but then were trying to load main in the navigator
-    - I wrapped this in a template and changed the nav to load it
-  -->
+
   <template id="list-temp">
     <ons-page id="list-page">
       <div class="content content-container">
         <h2>Pokedex List</h2>
 
-        <div class="webflow-style-input">
-          <ons-search-input id="search-field" placeholder="Search Pokemon">
-        </div>
+        <div class="search-box">
+          <div class="webflow-style-input">
+            <input id="search-field" placeholder="Search Pokemon">
+          </div>
 
-        <div class="button">
-          <ons-button style="font-size: 15px "id="search-button">
+          <button id="search-button">
             Search
-          </ons-button>
+          </button>
         </div>
 
         <ons-list id="list-item"></ons-list>
 
-        <center><div>
-          <ons-button id="pagination-previous">Back</ons-button>
-          <ons-button id="pagination-next">Next</ons-button>
-            </div></center>
+        <div class="paginatiion-pokemons">
+          <ons-button id="pagination-previous">< Previous</ons-button>
+          <ons-button id="pagination-next">Next ></ons-button>
+        </div>
       </div>
     </ons-page>
   </template>
